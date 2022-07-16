@@ -10,8 +10,8 @@ def find_all_users_id(data: dict)->list:
         list: List containing all the users id
     """
     user_list = []
-    for k,q in data.items():
-        if k == "name":
-            user_list.append([q])
+    for k in data['messages']:
+        if k == "from_id":
+            user_list.append(k['from_id'])
     return user_list
 print(find_all_users_id(read_data))
