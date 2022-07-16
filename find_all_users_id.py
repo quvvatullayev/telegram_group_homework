@@ -9,9 +9,9 @@ def find_all_users_id(data: dict)->list:
     Returns:
         list: List containing all the users id
     """
-    user_list = []
-    for k in data['messages']:
-        if k == "from_id":
-            user_list.append(k['from_id'])
-    return user_list
-print(find_all_users_id(read_data))
+    list_print = []
+    for i in data["messages"]:
+        if i == 'actor_id':
+            list_print.append(i['actor_id'])
+
+    return list_print
