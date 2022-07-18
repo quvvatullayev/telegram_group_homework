@@ -10,10 +10,9 @@ def find_all_users_name(data: dict)->list:
         list: List containing all the users name.
     """
     list1 = []
-    for i in data['messages']:
-        if i.get("actor") and i.get('actor') not in list1:
-            list1.append([i['actor']])
-
-        if i.get("from") and i.get('from') not in list1:
-                list1.append([i['from']])
+    for i in data["messages"]:
+        if i.get("actor") and i.get("actor") not in list1:
+            list1.append(i["actor"])
+        if i.get("from") and i.get("from") not in list1:
+            list1.append(i["from"])
     return list(list1)
