@@ -14,7 +14,7 @@ def find_all_users_name(data: dict)->list:
         if i.get("actor"):
             if i.get('actor') not in list1:
                 list1.append([i['actor']])
-        elif i.get("from"):
+        if i.get("from"):
             if i.get('from') not in list1:
                 list1.append([i['from']])
     return list1
