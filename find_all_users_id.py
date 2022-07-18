@@ -11,8 +11,8 @@ def find_all_users_id(data: dict)->list:
     """
     list_print = []
     for i in data["messages"]:
-            if i['id'] not in list_print:
-                list_print.append(i['id'])
+        if i.get('from_id'):
+            if i['from_id'] not in list_print:
+                list_print.append(i['from_id'])
 
     return list_print
-print(find_all_users_id(read_data))
