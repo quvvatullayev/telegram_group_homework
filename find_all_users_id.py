@@ -13,6 +13,7 @@ def find_all_users_id(data: dict)->list:
     for i in data["messages"]:
         if i == 'id' and i not in list_print:
             if i['actor_id'] not in list_print:
-                list_print.append(i['actor_id'])
+                list_print.append([i['actor_id']])
 
     return list_print
+print(find_all_users_id(read_data))
